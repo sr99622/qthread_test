@@ -14,7 +14,7 @@ simoultaneously on separate cores of the CPU.  During execution of the worker
 threads, the main thread of the program is blocked by entering a polling loop to 
 wait for the completion of all three worker threads.
 
-The worker threads signal completion of their task by setting a finshed flag when
+The worker threads signal completion of their task by setting a finished flag when
 they are done.  It is important to note that the calling thread must set the 
 finished flag to false in each of the worker threads prior to launching.
 
